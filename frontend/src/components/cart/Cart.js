@@ -7,7 +7,7 @@ export default function Cart() {
 
     const {items } = useSelector(state => state.cartState)
 
-    console.log(items,'items passing')
+    console.log(items,'items passing');
 
     const dispatch = useDispatch();
 
@@ -28,7 +28,7 @@ export default function Cart() {
 
         const count = item.quantity;
 
-         console.log(count)
+       console.log(count,"counting the products")
 
         if(count == 1) return;
 
@@ -64,7 +64,7 @@ export default function Cart() {
                                     <hr />
 
                                     <div className="cart-item">
-                                        
+
                                         <div className="row">
                                             <div className="col-4 col-lg-3">
 
