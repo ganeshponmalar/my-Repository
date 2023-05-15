@@ -35,6 +35,9 @@ exports.newOrder =  catchAsyncError( async (req, res, next) => {
 //Get Single Order - api/v1/order/:id
 exports.getSingleOrder = catchAsyncError(async (req, res, next) => {
     const order = await Order.findById(req.params.id).populate('user', 'name email');
+
+    console.log(order)
+    
     if(!order) {
         return next(new ErrorHandler(`Order not found with this id: ${req.params.id}`, 404))
     }
